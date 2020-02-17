@@ -5,7 +5,7 @@ some few options it contains so far :
 - Add an amount of money to your deposit
 - Cash out from your deposit
 
-* I also created a simple interface to get the player's nickname and the initial amount of money that user is willing to play.
+* I also created a simple interface to get the player's nickname and the initial amount of money that user is willing to gamble.
 * other options that I am thinking of implementing:
     - gamble on different intervals of numbers(e.g: 1-50, 1-100 - with a higher prize)
     - gamble on colors(e.g: red/black)
