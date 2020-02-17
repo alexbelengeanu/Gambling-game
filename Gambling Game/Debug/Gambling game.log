@@ -1,0 +1,4 @@
+﻿  Source.cpp
+e:\proiecte programare\gambling game\gambling game\source.cpp(12): warning C4018: '<': signed/unsigned mismatch
+e:\proiecte programare\gambling game\gambling game\source.cpp(86): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Gambling game.vcxproj -> E:\proiecte programare\Gambling game\Debug\Gambling game.exe
