@@ -6,7 +6,7 @@
 using namespace std;
 char nickname[30];
 float amount;
-int nicknameValidation(char name[30]) // a function to see if the nickname only contains lower/upper cases
+int nicknameValidation(char name[30]) // a function used to see if the nickname only contains lower/upper cases
 {
 	int i, k = 0;
 	for (i = 0;i < strlen(name);i++)
@@ -24,7 +24,7 @@ int nicknameValidation(char name[30]) // a function to see if the nickname only 
 	}
 	return k;
 }
-int amountValidation(float n) // a function to validate if the number is between 5 and 1.000.000
+int amountValidation(float n) // a function used to validate if the number is between 0 and 1.000.000
 {
 	if (n > 0 && n < 1000000)
 		return 1;
@@ -41,7 +41,7 @@ void drawHeader() // show the header message
 	for (i = 0;i < 50;i++)
 		cout << "=";
 }
-void getNickname() // a function to get the user's nickname
+void getNickname() // a function used to get the user's nickname
 {
 	char name[30];
 	int ok=0;
@@ -56,7 +56,7 @@ void getNickname() // a function to get the user's nickname
 		else strcpy(nickname, name);
 	} while (ok == 0);
 }
-void getAmount() // a function to get the amount of money the player wants to gamble
+void getAmount() // a function used to get the amount of money the player wants to gamble
 {
 	int ok = 0;
 	system("cls");
@@ -70,24 +70,24 @@ void getAmount() // a function to get the amount of money the player wants to ga
 		if (ok == 0) cout << "You entered an invalid amount of money, let's do this one more time buddy!";
 	} while (ok == 0);
 }
-int getGuess()
+int getGuess() // function to get the user's guess for the lucky number
 {
 	int opt, ok = 0;
 	do {
 		cout << "And now, dear " << nickname << " your lucky number is: ";
 		cin >> opt;
 		if (opt == 0) return opt;
-		if (opt < 0 || opt>10) cout << "Your number should be between 1-10. Try again!";
+		if (opt < 0 || opt>10) cout << "Your number should be between 1-10. Try again!"; 
 	} while (opt < 0 || opt>10);
 	return opt;
 }
-int getRandomNumber()
+int getRandomNumber() // generates the random lucky number
 {
 	default_random_engine randomGenerator(time(0));
 	uniform_int_distribution<int> randomNum(1,10);
 	return randomNum(randomGenerator);
 }
-void addAmount()
+void addAmount() // a function used to add an amount of money to the player's deposit
 {
 	float money;
 	int ok = 0;
@@ -105,7 +105,7 @@ void addAmount()
 		else amount += money;
 	} while (ok == 0);
 }
-void cashOut()
+void cashOut() // function used to cash out an amount of money
 {
 	float money;
 	int ok = 0;
@@ -123,7 +123,7 @@ void cashOut()
 		}
 	} while (ok == 0);
 }
-void startGame()
+void startGame() // the game itself
 {
 	system("cls");
 	drawHeader();
@@ -217,7 +217,8 @@ void drawMenu() // shows the menu of the game
 		}
 	} while (1);
 }
-int main() {
+int main() 
+{
 	getNickname();
 	getAmount();
 	drawMenu();
