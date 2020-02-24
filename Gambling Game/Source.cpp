@@ -31,7 +31,7 @@ int amountValidation(float n) // a function used to validate if the number is be
 	else
 		return 0;
 }
-void drawHeader() // show the header message
+void drawHeader() // it shows the header message
 {
 	int i;
 	for (i = 0;i < 50;i++)
